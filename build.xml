@@ -4,7 +4,7 @@
     </description>
   <!-- set global properties for this build -->
   <property name="src" location="src"/>
-  <property name="build" location="WEB-INF/classes"/>
+  <property name="build" location="WebContent/WEB-INF/classes"/>
   <property name="dist"  location="dist"/>
   <property name="lib"  location="WebContent/WEB-INF/lib"/>
 
