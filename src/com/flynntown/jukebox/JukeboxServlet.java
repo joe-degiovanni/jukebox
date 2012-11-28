@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class JukeboxServlet
  */
-@WebServlet("/JukeboxServlet")
+@WebServlet("/jukebox")
 public class JukeboxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +20,7 @@ public class JukeboxServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		welcomePage(response);
+		response = welcomePage(response);
 	}
 
 	/**
@@ -30,7 +30,7 @@ public class JukeboxServlet extends HttpServlet {
 		welcomePage(response);
 	}
 	
-	private void welcomePage(HttpServletResponse response) throws IOException{
+	private HttpServletResponse welcomePage(HttpServletResponse response) throws IOException{
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<html>");
@@ -39,8 +39,10 @@ public class JukeboxServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>Welcome to the Flynntown YouTube Jukebox!</h1>");
+        out.println("<iframe width='560' height='315' src='http://www.youtube.com/embed/C8CLmlgyp9U' frameborder='0' allowfullscreen></iframe>");
         out.println("</body>");
         out.println("</html>");
+        return response;
 	}
 
 }
