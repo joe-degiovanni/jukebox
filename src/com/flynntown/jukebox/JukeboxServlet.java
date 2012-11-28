@@ -39,7 +39,7 @@ public class JukeboxServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>Welcome to the Flynntown YouTube Jukebox!</h1>");
-        out.println("<iframe width='560' height='315' src='http://www.youtube.com/embed/C8CLmlgyp9U' frameborder='0' allowfullscreen></iframe>");
+        out.println("<iframe width='560' height='315' src='http://www.youtube.com/embed/C8CLmlgyp9U&autoplay=1' frameborder='0' allowfullscreen></iframe>");
         out.println("</body>");
         out.println("</html>");
         return response;
