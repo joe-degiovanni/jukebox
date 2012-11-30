@@ -2,11 +2,15 @@ package com.flynntown.jukebox;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.flynntown.jukebox.playlist.YouTubePlaylist;
 
 /**
  * Servlet implementation class JukeboxServlet
@@ -14,7 +18,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/jukebox")
 public class JukeboxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static final String[] videos = {"videoid1","videoid2","videoid3"};
+	
+	private YouTubePlaylist playlist;
+	
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		playlist = new YouTubePlaylist("test");
+		for(String vID : videos){
+			playlist.addItem(new YouTubeVideo(vID));
+		}
+		
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,6 +55,7 @@ public class JukeboxServlet extends HttpServlet {
         out.println("<body>");
         out.println("<h1>Welcome to the Flynntown YouTube Jukebox!</h1>");
         out.println("<object width='560' height='315'><param name='movie' value='http://www.youtube.com/v/C8CLmlgyp9U?version=3&amp;autoplay=1&amp;hl=en_US'></param><param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param><embed src='http://www.youtube.com/v/C8CLmlgyp9U?version=3&amp;autoplay=1&amp;hl=en_US' type='application/x-shockwave-flash' width='560' height='315' allowscriptaccess='always' allowfullscreen='true'></embed></object>");
+        out.println("<div>The current videoID is "+playlist.getCurrentItem().getID()+"</div>");
         out.println("</body>");
         out.println("</html>");
         return response;
