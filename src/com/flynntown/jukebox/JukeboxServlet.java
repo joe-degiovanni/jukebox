@@ -18,7 +18,7 @@ import com.flynntown.jukebox.playlist.YouTubePlaylist;
 @WebServlet("/jukebox")
 public class JukeboxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String[] videos = {"videoid1","videoid2","videoid3"};
+	private static final String[] videos = {"C8CLmlgyp9U","0l5gcxOV79U","0l5gcxOV79U"};
 	
 	private YouTubePlaylist playlist;
 	
@@ -54,7 +54,7 @@ public class JukeboxServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<h1>Welcome to the Flynntown YouTube Jukebox!</h1>");
-        out.println("<object width='560' height='315'><param name='movie' value='http://www.youtube.com/v/C8CLmlgyp9U?version=3&amp;autoplay=1&amp;hl=en_US'></param><param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param><embed src='http://www.youtube.com/v/C8CLmlgyp9U?version=3&amp;autoplay=1&amp;hl=en_US' type='application/x-shockwave-flash' width='560' height='315' allowscriptaccess='always' allowfullscreen='true'></embed></object>");
+        out.println("<object width='560' height='315'><param name='movie' value='http://www.youtube.com/v/"+playlist.getCurrentItem().getID()+"?version=3&amp;autoplay=1&amp;hl=en_US'></param><param name='allowFullScreen' value='true'></param><param name='allowscriptaccess' value='always'></param><embed src='http://www.youtube.com/v/C8CLmlgyp9U?version=3&amp;autoplay=1&amp;hl=en_US' type='application/x-shockwave-flash' width='560' height='315' allowscriptaccess='always' allowfullscreen='true'></embed></object>");
         out.println("<div>The current videoID is "+playlist.getCurrentItem().getID()+"</div>");
         out.println("</body>");
         out.println("</html>");
