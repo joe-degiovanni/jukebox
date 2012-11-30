@@ -35,6 +35,15 @@ public class JukeboxServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String[] values = request.getParameterValues("video");
+		if(values!=null && values[0] != null) {
+			try {
+				int index = new Integer(values[0]);
+				playlist.goTo(index);
+			} catch (Exception e) {
+				// add error handling code
+			}
+		}
 		response = welcomePage(response);
 	}
 
