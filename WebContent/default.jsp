@@ -14,12 +14,12 @@
 <body>
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
 <img src="/jukebox/images/jukebox.jpg" />
-<object width='560' height='315'>
+<object width='820' height='515' style='position: absolute;left: 300px;top: 700px;'>
 	<param name='movie' value='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US'></param>
 	<param name='allowFullScreen' value='true'></param>
 	<param name='allowscriptaccess' value='always'></param>
 	<embed src='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US' 
-		type='application/x-shockwave-flash' width='560' height='315' allowscriptaccess='always' allowfullscreen='true'></embed>
+		type='application/x-shockwave-flash' width='820' height='515' allowscriptaccess='always' allowfullscreen='true'></embed>
 </object>");
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
 </body>
