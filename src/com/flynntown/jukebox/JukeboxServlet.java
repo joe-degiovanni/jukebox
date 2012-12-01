@@ -24,14 +24,22 @@ public class JukeboxServlet extends HttpServlet {
 	
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
-		playlist = new YouTubePlaylist("test");
-		for(String vID : videos){
-			playlist.addItem(new YouTubeVideo(vID));
-		}
+		playlist = createTestPlaylist();
 		
 	}
 	
+	private static YouTubePlaylist createTestPlaylist(){
+		YouTubePlaylist	ytp = new YouTubePlaylist("test");
+		for(String vID : videos){
+			ytp.addItem(new YouTubeVideo(vID));
+		}
+		return ytp;
+	}
+	
 	public static YouTubePlaylist getPlaylist(){
+		if(playlist==null){
+			playlist = createTestPlaylist();
+		}
 		return playlist;
 	}
 
