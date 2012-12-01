@@ -13,6 +13,7 @@
 </head>
 <body>
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
+<img src="/images/jukebox.jpg" />
 <object width='560' height='315'>
 	<param name='movie' value='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US'></param>
 	<param name='allowFullScreen' value='true'></param>
