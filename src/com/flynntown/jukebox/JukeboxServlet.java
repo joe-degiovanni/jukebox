@@ -20,7 +20,7 @@ public class JukeboxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final String[] videos = {"C8CLmlgyp9U","gkQvgOKI0qA","0l5gcxOV79U"};
 	
-	private YouTubePlaylist playlist;
+	private static YouTubePlaylist playlist;
 	
 	public void init(ServletConfig config) throws ServletException {
 		super.init(config);
@@ -29,6 +29,10 @@ public class JukeboxServlet extends HttpServlet {
 			playlist.addItem(new YouTubeVideo(vID));
 		}
 		
+	}
+	
+	public static YouTubePlaylist getPlaylist(){
+		return playlist;
 	}
 
 	/**
