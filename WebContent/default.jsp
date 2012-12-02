@@ -20,20 +20,13 @@
 </head>
 <body>
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
-<object width='820' height='515'>
-	<param name='movie' value='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US'></param>
-	<param name='allowFullScreen' value='true'></param>
-	<param name='allowscriptaccess' value='always'></param>
-	<embed src='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US' 
-		type='application/x-shockwave-flash' width='820' height='515' allowscriptaccess='always' allowfullscreen='true'></embed>
-</object>
 <object 
 	type="application/x-shockwave-flash" 
 	id="myytflashplayer" 
-	data="https://www.youtube.com/apiplayer?video_id=Zhawgd0REhA&amp;version=3&amp;origin=https://developers.google.com&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
+	data="https://www.youtube.com/apiplayer?video_id=<%= playlist.getCurrentItem().getID() %>&amp;version=3&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
 	width="640" height="360">
 	<param name="allowScriptAccess" value="always">
-	<param name="bgcolor" value="#cccccc">
+	<param name="bgcolor" value="#000">
 </object>
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
