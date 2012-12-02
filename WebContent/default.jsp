@@ -5,6 +5,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style>
+	.ondeckitem{
+		float: left;
+		padding:10px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Flynntown YouTube Jukebox</title>
 <%
@@ -20,6 +27,15 @@
 	<embed src='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US' 
 		type='application/x-shockwave-flash' width='820' height='515' allowscriptaccess='always' allowfullscreen='true'></embed>
 </object>
+<object 
+	type="application/x-shockwave-flash" 
+	id="myytflashplayer" 
+	data="https://www.youtube.com/apiplayer?video_id=Zhawgd0REhA&amp;version=3&amp;origin=https://developers.google.com&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
+	width="640" height="360">
+	<param name="allowScriptAccess" value="always">
+	<param name="bgcolor" value="#cccccc">
+</object>
+
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
 <h2>On Deck</h2>
 <div>
