@@ -13,14 +13,25 @@
 </head>
 <body>
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
-<img src="/jukebox/images/jukebox.jpg" />
-<object width='820' height='515' style='position: absolute;left: 300px;top: 700px;'>
+<object width='820' height='515'>
 	<param name='movie' value='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US'></param>
 	<param name='allowFullScreen' value='true'></param>
 	<param name='allowscriptaccess' value='always'></param>
 	<embed src='http://www.youtube.com/v/<%= playlist.getCurrentItem().getID() %>?version=3&amp;autoplay=1&amp;hl=en_US' 
 		type='application/x-shockwave-flash' width='820' height='515' allowscriptaccess='always' allowfullscreen='true'></embed>
-</object>");
+</object>
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
+<h2>On Deck</h2>
+<div>
+	<div class="ondeckitem">
+		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(1)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+	</div>
+	<div class="ondeckitem">
+		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(2)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+	</div>
+	<div class="ondeckitem">
+		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(3)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+	</div>
+</div>
 </body>
 </html>

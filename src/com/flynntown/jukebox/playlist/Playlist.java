@@ -43,11 +43,20 @@ public class Playlist {
 	}
 	
 	public int getNextItemIndex(){
-		if(currentPosition==items.size()){
+		if(currentPosition >= items.size()-1){
 			return 0;
 		}
 		else {
 			return currentPosition+1;
+		}
+	}
+	
+	public int getNextItemIndex(int interval){
+		if(currentPosition+interval >= items.size()){
+			return interval - (items.size()-currentPosition);
+		}
+		else {
+			return currentPosition+interval;
 		}
 	}
 	
