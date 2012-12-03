@@ -39,22 +39,13 @@
 	
 	function loadNextVideo(){
 		$.ajax({
-				url:'nextvideo.js',
-				success: function(data) {alert("success");nextVideoCallback(data.responseText);},
-				error: function(data){alert("error");nextVideoCallback(data.responseText);},
-				complete: function(data){alert("complete:"+data.responseText);},
+				url:'nextvideo.jsp',
+				success: function(data) {alert("success");nextVideoCallback(data);},
 				dataType: 'json'
 		});
 	}
 	
-	function debug_error(one,two,three){
-		alert("debug error");
-		temp = "for debugging";
-	}
-	
 	function nextVideoCallback(data){
-		alert("loading next video:"+data);
-		temp = "for debugging";
 		ytplayer.loadVideoById(data);
 	}
 </script>

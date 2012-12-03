@@ -3,5 +3,6 @@
 <%@ page language="java" contentType="text/javascript; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%
 	YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
+	playlist.goToNext();
 %>
-{"videoId":"<%= playlist.getItem(playlist.getNextItemIndex()).getID() %>"}
+{"videoId":"<%= playlist.getItem(playlist.getCurrentItem()).getID() %>"}
