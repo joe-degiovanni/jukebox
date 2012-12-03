@@ -42,6 +42,8 @@
 	}
 	
 	function nextVideoCallback(data){
+		alert("loading next video");
+		temp = "for debugging";
 		ytplayer.loadVideoById(data);
 	}
 </script>
