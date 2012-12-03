@@ -20,6 +20,19 @@
 
 	function onytplayerStateChange(newState) {
 	   alert("Player's new state: " + newState);
+	   if (newState == '0'){
+		   loadNextVideo();
+	   } else if (newState == '-1'){
+		   startVideo();
+	   }
+	}
+	
+	function startVideo(){
+		alert('startVideo');
+	}
+	
+	function loadNextVideo(){
+		alert('loadNextVideo');
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
