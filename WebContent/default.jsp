@@ -64,6 +64,9 @@
 </object>
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
+<div>
+	<a href="javascript:loadNextVideo()">next</a>
+</div>
 <h2>On Deck</h2>
 <div>
 	<div class="ondeckitem">
