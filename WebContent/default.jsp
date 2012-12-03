@@ -40,7 +40,7 @@
 	function loadNextVideo(){
 		$.ajax({
 				url:'nextvideo.jsp',
-				success: function(data) {alert("success");nextVideoCallback(data);},
+				success: function(data) {nextVideoCallback(data);},
 				dataType: 'json'
 		});
 	}
