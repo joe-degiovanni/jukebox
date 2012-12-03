@@ -39,10 +39,10 @@
 	
 	function loadNextVideo(){
 		$.ajax({
-				url:'nextvideo.js',
+				url:'nextvideo.jsp',
 				success: function(data) {alert("success");nextVideoCallback(data);},
-				error: function(data){debug_error(data)},
-				complete: function(data){alert("complete")},
+				error: function(data){alert("error");},
+				complete: function(data){alert("complete");},
 				dataType: 'json'
 		});
 	}
