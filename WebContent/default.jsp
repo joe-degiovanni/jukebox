@@ -16,13 +16,14 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
 <script>
+	var videoCount = 0;
+
 	function onYouTubePlayerReady(playerId) {
 	  ytplayer = document.getElementById("myytplayer");
 	  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
 	}
 
 	function onytplayerStateChange(newState) {
-	   alert("Player's new state: " + newState);
 	   if (newState == '0'){
 		   loadNextVideo();
 	   } else if (newState == '-1'){
@@ -31,13 +32,12 @@
 	}
 	
 	function startVideo(){
-		alert('startVideo');
 		ytplayer.playVideo();
 	}
 	
 	function loadNextVideo(){
-		alert('loadNextVideo');
-		ytplayer.loadVideoById('videoId:<%= playlist.getItem(playlist.getNextItemIndex(1)).getID() %>');
+		videoCount++;
+		ytplayer.loadVideoById({videoId:'<%= playlist.getItem(playlist.getNextItemIndex(videoCount)).getID() %>'});
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
