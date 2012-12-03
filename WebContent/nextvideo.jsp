@@ -4,4 +4,4 @@
 <%
 	YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
 %>
-{videoId:'<%= playlist.getItem(playlist.getNextItemIndex()).getID() %>'}
+{"videoId":"<%= playlist.getItem(playlist.getNextItemIndex()).getID() %>"}
