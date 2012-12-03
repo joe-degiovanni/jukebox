@@ -48,12 +48,12 @@
 	}
 	
 	function debug_error(one,two,three){
-		alert("loading next video");
+		alert("debug error");
 		temp = "for debugging";
 	}
 	
 	function nextVideoCallback(data){
-		alert("loading next video");
+		alert("loading next video:"+data);
 		temp = "for debugging";
 		ytplayer.loadVideoById(data);
 	}
