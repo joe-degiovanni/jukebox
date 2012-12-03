@@ -18,7 +18,7 @@ import com.flynntown.jukebox.playlist.YouTubePlaylist;
 @WebServlet("/jukebox")
 public class JukeboxServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String[] videos = {"C8CLmlgyp9U","gkQvgOKI0qA","0l5gcxOV79U"};
+	private static final String[] videos = {"C8CLmlgyp9U","gkQvgOKI0qA","0l5gcxOV79U","9q6reEqJDjg","7YLy4j8EZIk"};
 	
 	private static YouTubePlaylist playlist;
 	
