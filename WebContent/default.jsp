@@ -38,7 +38,18 @@
 	}
 	
 	function loadNextVideo(){
-		$.getJSON('nextvideo.js', function(data) {alert("success");nextVideoCallback(data);}).error(alert("error:"+textStatus)).complete(alert("complete"));
+		$.ajax({
+				url:'nextvideo.js',
+				success: function(data) {alert("success");nextVideoCallback(data);},
+				error: function(data){debug_error(data)},
+				complete: function(data){alert("complete")},
+				dataType: 'json'
+		});
+	}
+	
+	function debug_error(one,two,three){
+		alert("loading next video");
+		temp = "for debugging";
 	}
 	
 	function nextVideoCallback(data){
