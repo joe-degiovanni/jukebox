@@ -4,6 +4,7 @@
     pageEncoding="ISO-8859-1"%>
 <%
  YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
+ int videoCount = 0;
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,7 +37,7 @@
 	}
 	
 	function loadNextVideo(){
-		videoCount++;
+		<%= videoCount++ %>
 		ytplayer.loadVideoById({videoId:'<%= playlist.getItem(playlist.getNextItemIndex(videoCount)).getID() %>'});
 	}
 </script>
