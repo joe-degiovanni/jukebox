@@ -16,6 +16,7 @@
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 <script>
 	var videoCount = 0;
 
@@ -37,8 +38,11 @@
 	}
 	
 	function loadNextVideo(){
-		<%= videoCount++ %>
-		ytplayer.loadVideoById({videoId:'<%= playlist.getItem(playlist.getNextItemIndex(videoCount)).getID() %>'});
+		$.getJSON('nextvideo.json', nextVideoCallback);
+	}
+	
+	function nextVideoCallback(data){
+		ytplayer.loadVideoById(data);
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
