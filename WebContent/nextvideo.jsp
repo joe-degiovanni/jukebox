@@ -4,6 +4,5 @@
     pageEncoding="ISO-8859-1"%>
 <%
  YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
- int videoCount = 0;
 %>
-{videoid:'<%=playlist.getItem(playlist.getNextItemIndex()).getID();%>'}
+{videoid:'<%= playlist.getItem(playlist.getNextItemIndex()).getID() %>'}
