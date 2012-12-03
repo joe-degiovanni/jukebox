@@ -5,4 +5,4 @@
 	YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
 	playlist.goToNext();
 %>
-{"videoId":"<%= playlist.getItem(playlist.getCurrentItem()).getID() %>"}
+{"videoId":"<%= playlist.getCurrentItem().getID() %>"}
