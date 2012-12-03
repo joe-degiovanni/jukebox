@@ -12,6 +12,16 @@
 	}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
+<script>
+	function onYouTubePlayerReady(playerId) {
+	  ytplayer = document.getElementById("myytplayer");
+	  ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+	}
+
+	function onytplayerStateChange(newState) {
+	   alert("Player's new state: " + newState);
+	}
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Flynntown YouTube Jukebox</title>
 <%
@@ -22,7 +32,7 @@
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
 <object 
 	type="application/x-shockwave-flash" 
-	id="myytflashplayer" 
+	id="myytplayer" 
 	data="https://www.youtube.com/apiplayer?video_id=<%= playlist.getCurrentItem().getID() %>&amp;version=3&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
 	width="640" height="360">
 	<param name="allowScriptAccess" value="always">
