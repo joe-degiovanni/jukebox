@@ -40,9 +40,9 @@
 	function loadNextVideo(){
 		$.ajax({
 				url:'nextvideo.js',
-				success: function(data) {alert("success");nextVideoCallback(data);},
-				error: function(data){alert("error");},
-				complete: function(data){alert("complete");},
+				success: function(data) {alert("success");nextVideoCallback(data.responseText);},
+				error: function(data){alert("error");nextVideoCallback(data.responseText);},
+				complete: function(data){alert("complete:"+data.responseText);},
 				dataType: 'json'
 		});
 	}
