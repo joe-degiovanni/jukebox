@@ -29,10 +29,12 @@
 	
 	function startVideo(){
 		alert('startVideo');
+		ytplayer.playVideo();
 	}
 	
 	function loadNextVideo(){
 		alert('loadNextVideo');
+		ytplayer.loadVideoById(videoId:'<%= playlist.getItem(playlist.getNextItemIndex(1)).getID() %>');
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
