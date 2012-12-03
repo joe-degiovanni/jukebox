@@ -38,7 +38,7 @@
 	}
 	
 	function loadNextVideo(){
-		$.getJSON('nextvideo.jsp', nextVideoCallback);
+		$.getJSON('nextvideo.jsp', function(data) {nextVideoCallback(data);});
 	}
 	
 	function nextVideoCallback(data){
