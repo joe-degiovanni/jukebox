@@ -21,7 +21,7 @@ public class DbUtils {
 		      Class.forName("com.mysql.jdbc.Driver");
 		      // Setup the connection with the DB
 		      connect = DriverManager
-		          .getConnection("jdbc:mysql://localhost/feedback?"
+		          .getConnection("jdbc:mysql://localhost/flynntownjukebox?"
 		              + "user="+user+"&password="+pw);
 		      
 		    } catch (Exception e) {
