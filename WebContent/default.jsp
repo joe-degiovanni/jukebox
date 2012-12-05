@@ -42,6 +42,12 @@
 				success: function(data) {nextVideoCallback(data);},
 				dataType: 'json'
 		});
+		updateOnDeck();
+	}
+	
+	function updateOnDeck(){
+		ondeck = $.get("ondeck.jsp");
+		$("#ondeckcontainer").html(ondeck.responseText);
 	}
 	
 	function nextVideoCallback(data){
