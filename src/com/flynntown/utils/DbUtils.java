@@ -9,13 +9,9 @@ public class DbUtils {
 	private PreparedStatement preparedStatement = null;
 	private ResultSet resultSet = null;
 	
-	public static boolean testConnection(String user, String pw){
-		try {
-			DbUtils dbu = new DbUtils();
-			dbu.readDataBase(user,pw);
-		} catch (Exception e) {
-			return false;
-		}
+	public static boolean testConnection(String user, String pw) throws Exception{
+		DbUtils dbu = new DbUtils();
+		dbu.readDataBase(user,pw);
 		return true;
 	}
 	
