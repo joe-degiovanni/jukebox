@@ -4,7 +4,6 @@
     pageEncoding="ISO-8859-1"%>
 <%
  YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
- int videoCount = 0;
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -68,16 +67,16 @@
 	<a href="javascript:loadNextVideo()">next</a>
 </div>
 <h2>On Deck</h2>
-<div>
-	<div class="ondeckitem">
-		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(1)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+	<div id="ondeckcontainer">
+		<div class="ondeckitem">
+			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(1)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+		</div>
+		<div class="ondeckitem">
+			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(2)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+		</div>
+		<div class="ondeckitem">
+			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(3)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+		</div>
 	</div>
-	<div class="ondeckitem">
-		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(2)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
-	</div>
-	<div class="ondeckitem">
-		<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(3)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
-	</div>
-</div>
 </body>
 </html>
