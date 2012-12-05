@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <%
-	boolean success = DbUtils.testConnection("sys","hans4dew");
+	boolean success = DbUtils.testConnection("#{param.user}","#{param.pw}");
 %>
 <title>DB TEST</title>
 </head>
