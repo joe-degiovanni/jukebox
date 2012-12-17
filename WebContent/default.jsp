@@ -66,6 +66,7 @@
 	width="640" height="360">
 	<param name="allowScriptAccess" value="always">
 	<param name="bgcolor" value="#000">
+	<param name="allowFullScreen" value="true"></param>
 </object>
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
