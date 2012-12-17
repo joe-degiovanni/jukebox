@@ -62,7 +62,7 @@
 <object 
 	type="application/x-shockwave-flash" 
 	id="myytplayer" 
-	data="https://www.youtube.com/apiplayer?video_id=<%= playlist.getCurrentItem().getID() %>&amp;version=3&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
+	data="https://www.youtube.com/apiplayer?video_id=<%= playlist.getCurrentItem().getID() %>&amp;version=3&amp;fs=1&amp;enablejsapi=1&amp;playerapiid=myytflashplayer" 
 	width="640" height="360">
 	<param name="allowScriptAccess" value="always">
 	<param name="bgcolor" value="#000">
