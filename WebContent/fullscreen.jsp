@@ -39,15 +39,10 @@
 	function loadNextVideo(){
 		$.ajax({
 				url:'nextvideo.jsp',
-				success: function(data) {nextVideoCallback(data);updateOnDeck();},
+				success: function(data) {nextVideoCallback(data);},
 				dataType: 'json'
 		});
 		
-	}
-	
-	function updateOnDeck(){
-		ondeck = $.get("ondeck.jsp");
-		$("#ondeckcontainer").html(ondeck.responseText);
 	}
 	
 	function nextVideoCallback(data){
