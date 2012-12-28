@@ -10,7 +10,7 @@
 <head>
 <style>
 	body{
-		background-color: red;
+		background-color: #cc3333;
 		text-align:center;
 	}
 
