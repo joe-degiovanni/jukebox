@@ -57,8 +57,7 @@
 		$.ajax({
 			url:'ondeck.jsp',
 			success: function(data) {$("#ondeckcontainer").html(data);},
-			error: function(data,status,other) {alert("error?");},
-			complete: function(data,status) {alert("complete: "+status);}
+			error: function(data,status,other) {alert("error");}
 		});
 	}
 	
@@ -83,7 +82,7 @@
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
 <div>
-	<a href="javascript:loadNextVideo()">next</a><input type="button" value="Next" onclick="loadNextVideo()"/>
+	<input type="button" value="Next" onclick="loadNextVideo()"/>
 </div>
 <h2>On Deck</h2>
 	<div id="ondeckcontainer">
