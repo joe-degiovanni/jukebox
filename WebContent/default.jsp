@@ -47,7 +47,7 @@
 	function loadNextVideo(){
 		$.ajax({
 				url:'nextvideo.jsp',
-				success: function(data) {nextVideoCallback(data);updateOnDeck();},
+				success: function(data) {updateOnDeck();nextVideoCallback(data);},
 				dataType: 'json'
 		});
 		
