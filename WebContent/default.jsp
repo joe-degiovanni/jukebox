@@ -12,6 +12,9 @@
 	body{
 		background-color: #cc3333;
 		text-align:center;
+		width:640px;
+		margin-right:auto;
+		margin-left:auto;
 	}
 
 	.ondeckitem{
