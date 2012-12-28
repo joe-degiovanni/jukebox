@@ -56,7 +56,7 @@
 	function updateOnDeck(){
 		$.ajax({
 			url:'ondeck.jsp',
-			success: function(data) {alert(data);$("#ondeckcontainer").html(data.responseText);},
+			success: function(data) {$("#ondeckcontainer").html(data);},
 			error: function(data,status,other) {alert("error?");},
 			complete: function(data,status) {alert("complete: "+status);}
 		});
