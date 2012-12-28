@@ -54,8 +54,10 @@
 	}
 	
 	function updateOnDeck(){
-		ondeck = $.get("ondeck.jsp");
-		$("#ondeckcontainer").html(ondeck.responseText);
+		$.ajax({
+			url:'nextvideo.jsp',
+			success: function(data) {$("#ondeckcontainer").html(data.responseText);}
+		});
 	}
 	
 	function nextVideoCallback(data){
@@ -79,7 +81,7 @@
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
 <div>
-	<a href="javascript:loadNextVideo()">next</a><input type="button" text="Next" onclick="loadNextVideo()">
+	<a href="javascript:loadNextVideo()">next</a><input type="button" value="Next" onclick="loadNextVideo()"/>
 </div>
 <h2>On Deck</h2>
 	<div id="ondeckcontainer">
