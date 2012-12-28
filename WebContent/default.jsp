@@ -9,6 +9,11 @@
 <html>
 <head>
 <style>
+	body{
+		background-color: red;
+		text-align:center;
+	}
+
 	.ondeckitem{
 		float: left;
 		padding:10px;
