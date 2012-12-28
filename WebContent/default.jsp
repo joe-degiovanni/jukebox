@@ -55,7 +55,7 @@
 	
 	function updateOnDeck(){
 		$.ajax({
-			url:'nextvideo.jsp',
+			url:'ondeck.jsp',
 			success: function(data) {$("#ondeckcontainer").html(data.responseText);}
 		});
 	}
