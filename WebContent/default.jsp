@@ -15,6 +15,7 @@
 		width:950px;
 		margin-right:auto;
 		margin-left:auto;
+		font-family:ubuntu;
 	}
 
 	.ondeckitem{
@@ -23,10 +24,12 @@
 	}
 	
 	#container{
-		width:900px;
-		margin:auto;
-		padding:20px;
-		background-color:#eeb;
+		width: 900px;
+		margin: auto;
+		padding: 20px;
+		background-color: #eeb;
+		border-radius: 30px;
+		border: 10px solid #333;
 	}
 	
 	#ondeckcontainer{
@@ -44,6 +47,7 @@
 	}
 	
 </style>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 <script>
@@ -120,6 +124,12 @@
 		</div>
 		<div class="ondeckitem">
 			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(3)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+		</div>
+		<div class="ondeckitem">
+			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(4)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
+		</div>
+		<div class="ondeckitem">
+			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(5)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
 		</div>
 	</div>
 </div>
