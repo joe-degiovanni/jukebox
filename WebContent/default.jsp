@@ -12,7 +12,7 @@
 	body{
 		background-color: #cc3333;
 		text-align:center;
-		width:640px;
+		width:950px;
 		margin-right:auto;
 		margin-left:auto;
 	}
@@ -21,6 +21,19 @@
 		float: left;
 		padding:10px;
 	}
+	
+	#container{
+		width:900px;
+		margin:auto;
+		padding:20px;
+		background-color:'#ccd';
+	}
+	
+	#videobox object{
+		padding:20px;
+		background-color:black;
+	}
+	
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.1/swfobject.js" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
@@ -100,6 +113,6 @@
 			<img src="//i4.ytimg.com/vi/<%= playlist.getItem(playlist.getNextItemIndex(3)).getID() %>/default.jpg" alt="" tabindex="-1" width="106" data-group-key="thumb-group-0">
 		</div>
 	</div>
-</body>
 </div>
+</body>
 </html>
