@@ -5,7 +5,7 @@
 <%
  YouTubePlaylist playlist = JukeboxServlet.getPlaylist();
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -69,7 +69,9 @@
 <title>Flynntown YouTube Jukebox</title>
 </head>
 <body>
+<div id="container">
 <h1>Welcome to the Flynntown YouTube Jukebox!</h1>
+<div id="videobox">
 <object 
 	type="application/x-shockwave-flash" 
 	id="myytplayer" 
@@ -81,6 +83,8 @@
 </object>
 
 <div>The current videoID is <%= playlist.getCurrentItem().getID() %></div>
+</div>
+
 <div>
 	<input type="button" value="Next" onclick="loadNextVideo()"/>
 </div>
@@ -97,4 +101,5 @@
 		</div>
 	</div>
 </body>
+</div>
 </html>
