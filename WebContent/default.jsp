@@ -26,12 +26,21 @@
 		width:900px;
 		margin:auto;
 		padding:20px;
-		background-color:'#ccd';
+		background-color:#eeb;
+	}
+	
+	#ondeckcontainer{
+		min-height: 100px;
+		border-radius: 10px;
+		border-color: black;
+		border: solid;
+		background-color: whitesmoke;
 	}
 	
 	#videobox object{
 		padding:20px;
 		background-color:black;
+		border-radius:10px;
 	}
 	
 </style>
