@@ -34,7 +34,7 @@
 	
 	#ondeckcontainer{
 		min-height: 100px;
-		border-radius: 10px;
+		border-radius: 5px;
 		border-color: black;
 		border: solid;
 		background-color: whitesmoke;
@@ -43,7 +43,7 @@
 	#videobox object{
 		padding:20px;
 		background-color:black;
-		border-radius:10px;
+		border-radius:15px;
 	}
 	
 </style>
